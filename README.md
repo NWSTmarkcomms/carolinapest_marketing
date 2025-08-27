@@ -1,6 +1,6 @@
-# Bug House Marketing Portal
+# Carolina Pest Marketing Portal
 
-This internal portal centralizes all print collateral requests for Bug House Pest Control. Built for simplicity, speed, and scale, the portal allows teammates to preview marketing materials and submit individual requests through embedded forms.
+This internal portal centralizes all print collateral requests for Carolina Pest Management. Built for simplicity, speed, and scale, the portal allows teammates to preview marketing materials and submit individual requests through embedded forms.
 
 ---
 
@@ -23,10 +23,3 @@ This internal portal centralizes all print collateral requests for Bug House Pes
 - `coffee-shop-cards.html` – Coffee Shop Cards
 - `questions.html` – FAQ / Submission Support
 
----
-
-## 🛠 Deployment
-
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/YOUR-ORG/bughouse-marketing.git
