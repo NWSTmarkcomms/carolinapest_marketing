@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-  background-color: #b00;
+  background-color: #1a96d6;
   padding: 1rem 2rem;
   text-align: center;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .hero-banner {
-  background: linear-gradient(to right, #900, #b00);
+  background: linear-gradient(to right, #1578ab, #1a96d6);
   color: white;
   padding: 2rem;
   text-align: center;
@@ -105,13 +105,13 @@ body.modal-open .product-card:hover {
 
 .product-details input:focus,
 .product-details select:focus {
-  border-color: #b00;
+  border-color: #1a96d6;
   outline: none;
 }
 
 .product-details button {
   padding: 0.75rem;
-  background-color: #b00;
+  background-color: #1a96d6;
   color: white;
   border: none;
   border-radius: 6px;
@@ -122,7 +122,7 @@ body.modal-open .product-card:hover {
 }
 
 .product-details button:hover {
-  background-color: #900;
+  background-color: #1578ab;
 }
 
 
@@ -210,7 +210,7 @@ body.modal-open {
 
 .product-card .product-title {
   font-size: 1.5rem;
-  color: #b00;
+  color: #1a96d6;
   margin: 0 0 1rem 0;
   text-align: left;
 }
@@ -316,7 +316,7 @@ body.modal-open {
   display: flex;
   align-items: center;
   max-width: 1200px;
-  border: 2px solid #b00;
+  border: 2px solid #1a96d6;
   border-radius: 12px;
   overflow: hidden;
   background-color: white;
@@ -370,7 +370,7 @@ body.modal-open {
 
 .product-details.button {
   padding: 0.75rem 1.25rem;
-  background-color: #b00;
+  background-color: #1a96d6;
   color: white;
   border-radius: 6px;
   font-weight: bold;
@@ -382,14 +382,14 @@ body.modal-open {
 }
 
 .product-details.button:hover {
-  background-color: #900;
+  background-color: #1578ab;
 }
 
 .return-home-btn {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: #b00;
+  background-color: #1a96d6;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -398,7 +398,7 @@ body.modal-open {
 }
 
 .return-home-btn:hover {
-  background-color: #900;
+  background-color: #1a96d6;
 }
 
 html, body {
@@ -459,7 +459,7 @@ a:visited {
 
 .feature-title-link:hover {
   text-decoration: underline;
-  color: #b00; /* or your brand color */
+  color: #1a96d6; /* or your brand color */
 }
 
 .feature-details {
