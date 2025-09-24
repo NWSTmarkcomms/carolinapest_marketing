@@ -216,13 +216,19 @@ body.modal-open {
 }
 
 .product-card {
-  background: #fffdf5; /* ✅ soft cream color */
-  border: 1px solid #e8e6dd; /* optional subtle border */
+  background: #ffffff;
+  border: 1px solid #e8e6dd; /* subtle border */
   border-radius: 12px;
   padding: 1rem 1.25rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05); /* gentle lift */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  transform-origin: top left; /* Keeps alignment natural */
+  transform-origin: top left;
+
+  max-width: 320px;   /* ✅ keep cards thinner */
+  width: 100%;        /* ✅ shrink to fit grid cell */
+  margin: 0 auto;     /* ✅ center inside each grid column */
+}
+
 }
 
 .nav-search-wrapper {
