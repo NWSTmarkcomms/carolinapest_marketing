@@ -47,10 +47,10 @@ body {
 
 .product-grid {
   display: grid;
-grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr); /* always 3 columns */
+  gap: 1rem;
   padding: 1rem;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
