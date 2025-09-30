@@ -12,7 +12,7 @@
     
   <header class="header">
     <div class="logo-nav-container">
-      <img src="images/logo-placeholder.png" alt="Company Logo" class="logo" />
+      <img src="images/CP.png" alt="Carolina Pest Logo" class="logo" />
     
 
 
@@ -29,11 +29,9 @@
   <a href="flyers.html">Flyers</a>
   <a href="takeover.html">Takeover Cards</a>
   <a href="thank-you-cards.html">Thank You Cards</a>
-  <a href="new-construction.html">New Construction</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html">Contact Us</a>
 </nav>
-
 </div>
 
 
@@ -70,22 +68,25 @@
 </section>
 
 
+
+
+
   <main class="product-grid">
 
 
-
-    <div class="product-card">
-      <h2 class="product-title">All Services Flyer (8.5x11")</h2>
+                              <div class="product-card">
+      <h2 class="product-title">Realtor's City View Flyer (8.5x11")</h2>
 
         <div class="row-layout">
-        <div class="flyer-expand-toggle">
-          <input type="checkbox" id="expand-all-services-flyer" class="expand-checkbox" hidden>
+<div class="flyer-expand-toggle">
+  <input class="expand-checkbox" hidden id="expand-Realtor's City View Flyer" type="checkbox" />
+
   <!-- 👇 This label controls the expand toggle -->
-  <label class="flyer-thumb-container" for="expand-all-services-flyer">
+  <label class="flyer-thumb-container" for="expand-Realtor's City View Flyer">
     <img
-      alt="All Services Flyer"
+      alt="All Services Leave Behind"
       class="flyer-thumb top-left"
-      src="images/BHPC-allservices-flyer-120.png"
+      src="images/CP-reatlor-city-view-flyer-120.png"
     />
 
     <!-- 👇 This text is part of the same label, so it's clickable too -->
@@ -94,24 +95,15 @@
     </p>
   </label>
 
-  <!-- This section shows the expanded view -->
-  <label class="flyer-expanded-view" for="expand-all-services-flyer">
-    <button aria-label="Close" class="flyer-close-button">×</button>
-    <img
-      alt="All Services Flyer"
-      class="flyer-expanded-img"
-      src="images/BHPC-allservices-flyer-720.png"
-    />
-  </label>
-</div>
-          
-        <div class="product-details">
+   <div class="product-details">
       <form 
-        action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
-        method="POST" 
-        target="hiddenFrame"
-        onsubmit="setTimeout(() => { window.location.href = 'https://bughousesuccess.netlify.app/'; }, 1000);"
-      >
+  action="https://hooks.zapier.com/hooks/catch/12716030/um5yqfo/" 
+  method="POST" 
+  target="hiddenFrame" 
+  onsubmit="handleFormSubmit(event)" 
+>
+
+
             <input type="text" name="fullName" placeholder="Manager Name" required />
             <input type="email" name="email" placeholder="Manager Email" required />
             <select name="Quantity" required>
@@ -123,29 +115,33 @@
             </select>
             <select name="office" required>
               <option value="" disabled selected>Select Office</option>
-        <option value="Augusta - BHPC">Augusta - BHPC</option>
-        <option value="Carrollton - BHPC">Carrollton - BHPC</option>
-        <option value="Dublin - BHPC">Dublin - BHPC</option>
-        <option value="Eastman - BHPC">Eastman - BHPC</option>
-        <option value="Greensboro - BHPC">Greensboro - BHPC</option>
-        <option value="Macon - BHPC">Macon - BHPC</option>
-        <option value="Madison - BHPC">Madison - BHPC</option>
-        <option value="Milledgeville - BHPC">Milledgeville - BHPC</option>
-        <option value="St. Simons - BHPC">St. Simons - BHPC</option>
-        <option value="Warner Robins - BHPC">Warner Robins - BHPC</option>
-        <option value="Watkinsville - BHPC">Watkinsville - BHPC</option>
+        <option value="Carolina Pest">Carolina Pest</option>
             </select>
-            <input type="hidden" name="product" value="All Services Flyer" />
+          <input type="hidden" name="product" value="Realtor's City View Flyer" />
             <button type="submit" class="button">Request</button>
           </form>
+
+          <p id="successMessage" style="display:none; color:green; margin-top:10px;">
+  🥳 Stay tuned for an email confirmation!
+</p>
         </div>
+
+  <!-- This section shows the expanded view -->
+  <label class="flyer-expanded-view" for="expand-Realtor's City View Flyer">
+    <button aria-label="Close" class="flyer-close-button">×</button>
+    <img
+      alt="All Services Leave Behind"
+      class="flyer-expanded-img"
+      src="images/CP-reatlor-city-view-flyer-720.png"
+    />
+  </label>
+</div>
       </div>
     </div>
-    
 
-          
-    
-  </main>
+
+
+   </main>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const checkboxes = Array.from(document.querySelectorAll('.expand-checkbox'));
@@ -215,6 +211,32 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleFeature(e);
     });
   }
+
+  // ✅ Form handler for Zapier + success message + redirect
+  window.handleFormSubmit = function(e) {
+    e.preventDefault();
+    const form = e.target;
+
+    // Submit to Zapier webhook
+    form.submit();
+
+    // Clear the form
+    form.reset();
+
+    // Show success message only inside this product-card
+    const msg = form.closest('.product-details').querySelector('#successMessage');
+    if (msg) {
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 2000); // fade message before redirect
+    }
+
+    // Redirect after short delay
+    setTimeout(() => {
+      window.location.href = 'success.html';
+    }, 2500);
+    };
 });
 </script>
 
