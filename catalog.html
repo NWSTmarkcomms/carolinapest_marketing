@@ -9,10 +9,11 @@
 <body>
 
 <header class="site-header google-style-header">
+
   <div class="header-top centered-header-layout">
 
     <div class="header-left">
-      <img src="images/CP.png" alt="Carolina Pest Logo" class="brand-logo huge-logo" />
+      <img src="/images/logos/R1-5.png" alt="Northwest Logo" class="brand-logo huge-logo" />
     </div>
 
     <div class="header-center">
@@ -24,23 +25,22 @@
       />
     </div>
 
-    <nav class="nav-bar centered-nav">
+      <nav class="nav-bar centered-nav">
       <a href="catalog.html" class="header-btn">Home - Catalog</a>
-      <a href="door-hangers.html" class="header-btn">Door Hangers</a>
-      <a href="leave-behinds.html" class="header-btn">Leave Behinds</a>
-      <a href="event-materials.html" class="header-btn">Event Materials</a>
-      <a href="flyers.html" class="header-btn">Flyers</a>
-      <a href="takeover.html" class="header-btn">Takeover Cards</a>
-      <a href="thank-you-cards.html" class="header-btn">Thank You Cards</a>
-      <a href="faq.html" class="header-btn">FAQ</a>
-      <a href="contact.html" class="header-btn">Contact Us</a>
-    </nav>
+      <a href="events-nw.html" class="header-btn">Events</a>
+      <a href="https://nwst-operations.netlify.app/" class="header-btn">Office Forms (Uniforms, Invoices, Etc)</a>
+      <a href="https://marketing-fob.netlify.app/service-standards" class="header-btn">Service Standards</a>
+      <a href="faq/index.html" class="header-btn">FAQ</a>
+  </nav>
 
   </div>
+
+
+
 </header>
 
 <section class="hero-banner">
-  <h1 class="hero-title">Carolina Pest Marketing Material Portal</h1>
+  <h1 class="hero-title">Marketing Material Portal</h1>
 </section>
 
 <section class="feature-section" id="featureSection" aria-expanded="false">
@@ -760,9 +760,9 @@
 
       <div class="footer-brand-block">
         <a href="catalog.html" class="footer-brand-link">
-          <img src="images/CP.png" alt="Carolina Pest Logo" class="footer-logo" />
+          <img src="images/northwest.png" alt="Northwest Logo" class="footer-logo" />
           <div class="footer-brand-text">
-            <span class="footer-brand-title">Carolina Pest Marketing Material Portal</span>
+            <span class="footer-brand-title">Marketing Material Portal</span>
           </div>
         </a>
       </div>
@@ -771,14 +771,25 @@
         <h3 class="footer-title">Portal</h3>
         <div class="footer-links">
           <a href="catalog.html">Marketing Materials</a>
-          <a href="event-materials.html">Event Materials</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact Us</a>
+          <a href="events-nw.html">Events</a>
+          <a href="faq/index.html">FAQ</a>
+<a href="mailto:marketingcommunications@callnorthwest.com?subject=Marketing%20Request&body=Hi%20Marketing%20Team,%0D%0A%0D%0AI%20need%20help%20with:%0D%0A-%0D%0A%0D%0AOffice:%0D%0AManager:%0D%0ADue%20Date:%0D%0A"
+   class="footer-btn">
+  Contact Us
+</a>
         </div>
       </div>
 
       <div>
-        <h3 class="footer-title">Contact</h3>
+        <h3 class="footer-title">Ops Support</h3>
+        <div class="footer-links">
+          <a href="https://nwst-operations.netlify.app/">Ops Support Portal</a>
+          <a href="https://app.smartsheet.com/b/form/c79abe03588f4e57ba945fe9afda2477">Mouse Apparel</a>
+          <a href="https://app.smartsheet.com/b/form/7ce55f3f15054b348da38054a92fb0be">Uniform Teamwear</a>
+        </div>
+      </div>
+
+      <div>
         <div class="footer-contact-list">
           <span>Marketing Communications Team</span>
           <a href="mailto:marketingcommunications@callnorthwest.com">
@@ -790,17 +801,17 @@
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Carolina Pest</span>
+      <span>© 2026 Northwest Exterminating</span>
     </div>
   </div>
 </footer>
 
-<iframe name="hiddenFrame" style="display:none;"></iframe>
-
 <div id="imageModal" class="image-modal" style="display:none;">
   <div class="image-modal-backdrop" onclick="closeImageModal()"></div>
   <div class="image-modal-content">
-    <button class="image-modal-close" onclick="closeImageModal()" aria-label="Close image preview">×</button>
+    <button class="image-modal-close" onclick="closeImageModal()" aria-label="Close image preview">
+      ×
+    </button>
     <img id="imageModalImg" src="" alt="" />
   </div>
 </div>
@@ -814,7 +825,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const q = this.value.toLowerCase().trim();
 
       document.querySelectorAll(".searchable-card").forEach(card => {
-        const title = card.querySelector(".product-title")?.textContent.toLowerCase() || "";
+        const title =
+          card.querySelector(".product-title")?.textContent.toLowerCase() ||
+          "";
+
         card.style.display = title.includes(q) ? "" : "none";
       });
     });
@@ -855,14 +869,6 @@ function closeImageModal() {
   img.alt = "";
   document.body.classList.remove("modal-open");
 }
-
-function handleFormSubmit(event) {
-  const form = event.target;
-  setTimeout(() => {
-    form.reset();
-  }, 500);
-}
 </script>
-
 </body>
 </html>
